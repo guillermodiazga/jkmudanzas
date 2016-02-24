@@ -1,0 +1,264 @@
+
+@color1:#0C73BD;//azul
+@color1:#009688;//verde
+
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+
+@import url(http://fonts.googleapis.com/css?family=Architects+Daughter);
+
+/*slogan*/
+@import url(http://fonts.googleapis.com/css?family=Kaushan+Script);
+@slogan: 'Kaushan Script', cursive;
+
+/*Nombre*/
+@import url(http://fonts.googleapis.com/css?family=Oswald:700);
+@nombre:  'Oswald', sans-serif;
+
+body{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+    
+    font-family: Arial;
+    background-image: url("../img/banner1.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-color: @color1;
+    font-size: 1.5rem;
+    #logo{
+        font-family: 'Architects Daughter', cursive; 
+        color: @color1;
+    }
+    nav{
+        font-family: 'Droid Sans', sans-serif;
+        color: @color1!important;
+        font-weight: bold;
+    }
+    
+    #banner{
+        height: 15rem;
+        width: 100%
+    }
+    #girl{
+        position:absolute;
+        top:10px;
+        z-index:0;
+    }
+    h1{
+        color: @color1;
+        text-align: center;
+        font-family: @slogan;
+    }
+    .slogan{
+        font-family:@slogan;
+    }
+    
+    .nombre{
+        font-family: @nombre!important;
+    }
+    section{
+        position:relative;
+        background-color: rgba(255,255,255,1);
+        z-index:10;
+        padding: 2rem;
+        h2{
+            color: @color1;
+            font-family: @slogan;
+        }
+        
+        h3{
+            color: @color1;
+            font-family: @slogan;
+            margin: 5rem 0rem 0rem 0rem;
+        }
+        
+        strong{
+            font-family: @slogan;
+            color: @color1;
+            font-size: 2.5rem;
+            font-weight: normal;
+        }
+        ul li {
+            text-align: justify;
+        }
+    }
+
+    footer{
+        background-color: rgba(255,255,255,0.9);
+        padding: 1rem;
+        font-family: 'Droid Sans', sans-serif;
+        b{
+            color:@color1;
+        }
+        address{
+            text-align: right;
+        }
+    }
+}
+
+.glyphicon{
+     color:@color1;
+}
+
+p{
+    text-align: justify;
+}
+.valores{
+    margin-left: auto;
+	margin-right: auto;
+    li{
+        
+        border: solid @color1 1px;
+        padding: 2rem;
+        margin: 1rem;
+        width: 80%;
+        height: 10%;
+        display: inline-block;
+        box-shadow: -0.5rem -0.5rem @color1;
+        border-radius: 10px;
+    }
+}
+.columns{
+	width: 48%;
+	float:left;
+	display: relative;
+	margin-left: auto;
+	margin-right: auto;
+	position: inline;
+    z-index: 1000;
+}
+/*Formularios*/
+form{
+    border: solid 1px gray;
+    background-color: #F1F1F1;
+    width: 50%;
+    margin:auto!important;
+    padding:1rem;
+    border-radius: 5px;
+
+}
+
+.campo{
+   margin: 0.5rem; 
+}
+
+input, textarea{
+    padding: 0.1em;
+    border-radius: 5px;
+    width: 95%;
+    font-size: 1.5rem;
+    color: #01316B;
+}
+textarea{
+    height: 7rem;
+}
+
+button, input[type='submit']{
+    background: linear-gradient(to bottom, @color1, darken(@color1,10%));
+    color:#ffffff;
+    box-shadow:1px 4px 1px 1px gray;
+    border-radius: 10px;
+    text-shadow:2px 2px 2px gray;
+    padding: 0.5em;
+}
+
+button:hover, input[type='submit']:hover{
+    opacity:0.8;
+    cursor: pointer;
+}
+
+/*Fin Formularios*/
+
+#myCarousel{
+    width: 80%;
+    height: 100%;
+    text-align:center;
+    
+    .item{
+        text-align:center;
+        margin: 0px;
+        span{
+            color: dimgray;
+            font-family: @slogan;
+            font-size: 2.5rem;
+            b{
+                color: @color1;
+            }
+        }
+        img{
+            height: 100%!important;
+            width:100%;
+            top:20%;
+
+        }
+    }
+}
+
+
+/*Animados*/
+
+#facebook{
+    position: fixed;
+    right: 0px;
+    top: 30px;
+    z-index: 1100;
+    width: 80px;
+    cursor: pointer;
+}
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+#facebook:hover{
+    opacity: 0.8;
+    animation-name: example;
+    animation-duration: 4s;
+    
+}
+
+@media all and (max-width:1159px){
+	.columns{
+		width: 100%;
+	}
+}
+
+/*Moviles*/
+@media all and (max-width: 800px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
+
+
+    body{
+        #banner{
+            display: none;
+        }
+        .slogan{
+           
+        }
+        
+/*Formularios*/
+        form{
+            width: 100%;
+        }
+    }
+    
+    #myCarousel{
+        width: 100%;
+        height: 100%;
+        text-align:center;
+
+        .item{
+            text-align:center;
+            span{
+                font-size: 1.2rem;
+            }
+            img{
+                height: 100%!important;
+                width:100%;
+                top:20%;
+
+            }
+        }
+    }
+
+    
+}
